@@ -1,0 +1,28 @@
+"""
+Баг-репорт 1
+Название: "утилита capitalize принимает на вход текст на русском и не возвращает текст"
+Тестовые данные: "апельсин"
+ОР: Ответ терминала: "test_string_utils.py::test_positive_capitalize[апельсин-Апельсин] PASSED"
+ФР: Ответ терминала: "test_string_utils.py::test_positive_capitalize[\u0430\u043f\u0435\u043b\u044c\u0441\u0438\u043d-\u0410\u043f\u0435\u043b\u044c\u0441\u0438\u043d] PASSED"
+"""
+"""
+Баг-репорт 2
+Название: "утилита trim принимает на вход текст на русском и не возвращает текст"
+Тестовые данные: "   апельсин"
+ОР: Ответ терминала: "test_string_utils.py::test_positive_trim[   апельсин-апельсин] PASSED"
+ФР: Ответ терминала: "test_string_utils.py::test_positive_trim[   \u0430\u043f\u0435\u043b\u044c\u0441\u0438\u043d-\u0430\u043f\u0435\u043b\u044c\u0441\u0438\u043d] PASSED"
+"""
+"""
+Баг-репорт 3
+Название: "утилита contains принимает на вход текст на русском и не возвращает текст"
+Тестовые данные: "Апельсин", "н", "True"
+ОР: Ответ терминала: "test_string_utils.py::test_positive_contains[Апельсин-н-True] PASSED"
+ФР: Ответ терминала: "test_string_utils.py::test_positive_contains[\u0410\u043f\u0435\u043b\u044c\u0441\u0438\u043d-\u043d-True] PASSED"
+"""
+"""
+Баг-репорт 4
+Название: "утилита delete_symbol принимает на вход "None" и возвращает ошибку"
+Тестовые данные: "Orange", "None", "Orange"
+ОР: Ответ терминала: "test_string_utils.py::test_positive_delete_symbol[Orange-None-Orange] PASSED"
+ФР: Ответ терминала: "test_string_utils.py::test_negative_delete_symbol[Orange-None-Orange] FAILED"
+"""
